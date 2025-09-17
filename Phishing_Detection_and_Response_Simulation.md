@@ -80,4 +80,4 @@ Finally, I went ahead and reported the incident as a **True Positive** and escal
 ---
 
 ## Conclusion
-This SOC operations simulation was highly realistic and gave me a factual glimpse of how SOC teams deal with everyday alerts — especially how to handle phishing attacks in a professional real-world environment.
+This SOC operations simulation was highly realistic and gave me a factual glimpse of how SOC teams deal with everyday alerts, especially how to handle phishing attacks in a professional real-world environment.
