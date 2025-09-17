@@ -1,7 +1,7 @@
 # Phishing Detection and Response Simulation
 
 ## Introduction
-This report documents a hands-on SOC simulation: Phishing Attacks in a life-like environment, with false positives and real time incoming alerts.
+This report documents a hands-on SOC simulation: Phishing Attacks in a life-like environment, with realistic noise, false positives and various real time incoming alerts.
 
 **What I Learnt:** Detecting, Analyzing, and Responding to phishing attacks.  
 It walks through the end-to-end process of investigating suspicious emails, classifying alerts as true or false positives, and applying appropriate remediation steps.
