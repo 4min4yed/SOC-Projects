@@ -19,7 +19,7 @@ I had multiple alerts on hand.
 
 After determining the alert to work on first, begins the analysis:
 
-![Assigned Alert](Images/assignd alert.png)
+![Assigned Alert](Images/assignd%20alert.png)
 
 Let’s take this first alert as an example; Understanding the different parts of the alert helps identify the threat if there is any:
 
@@ -29,7 +29,7 @@ Let’s take this first alert as an example; Understanding the different parts o
 
 So I started with analyzing the attachment in the mail using URL Scanning tools like: URLscan.io, VirusTotal, PhishTank, CheckPhish, or the one in this simulation: **TryDetectThis**:
 
-![Analyze URL](Images/analyze URL.png)
+![Analyze URL](Images/analyze%20URL.png)
 
 It says it is clean, but that’s not enough, further investigation should be conducted:
 
@@ -42,11 +42,11 @@ It says it is clean, but that’s not enough, further investigation should be co
 
 After being reassured it was safe, I closed the alert as a **False Positive**:
 
-![False Positive](Images/false positive.png)
+![False Positive](Images/false%20positive.png)
 
 and wrote a report to justify my judgement:
 
-![False Positive Report](Images/report of false positive.png)
+![False Positive Report](Images/report%20of%20false%20positive.png)
 
 ---
 
@@ -54,18 +54,18 @@ and wrote a report to justify my judgement:
 
 Now another alert caught my attention:
 
-![Phishing Microsoft](Images/phishing m1crosoft.png)
+![Phishing Microsoft](Images/phishing%20m1crosoft.png)
 
 The content included an obvious phishing link with a misspelled Microsoft (`m1crosoft`) so I scanned it just for evidence; and indeed, it was **malicious**:
 
-![Analyze Phishing URL](Images/analyze phishing URL.png)
+![Analyze Phishing URL](Images/analyze%20phishing%20URL.png)
 
 Next, I checked Splunk logs, and applied filters to see if the hazard had spread:
 
 - **Firewall logs:** check if the user has clicked the malicious link or not, and if clicked check affected machines
 - **Other emails:** check if others have received the same link and if they clicked
 
-![Splunk Investigation](Images/went on splunk to see if the same ip sent other malicious links to other recipients in the network.png)
+![Splunk Investigation](Images/went%20on%20splunk%20to%20see%20if%20the%20same%20ip%20sent%20other%20malicious%20links%20to%20other%20recipients%20in%20the%20network.png)
 
 Thankfully in this case it was fine (employees were well trained).
 
@@ -75,7 +75,7 @@ Finally, I went ahead and reported the incident as a **True Positive** and escal
 - Blacklisting sender’s IP
 - Making all employees aware of the incident to raise awareness
 
-![True Positive Report](Images/TruePositive Report.png)
+![True Positive Report](Images/TruePositive%20Report.png)
 
 ---
 
