@@ -1,6 +1,6 @@
-*Proof AI won't take over SOC analyst jobs, anytime soon (but it will definetyl will in the future ;( )*
-
 # Incident Report: 'Wacatac' malware was prevented
+
+*Proof AI won't take over SOC analyst jobs, anytime soon (but it will definetyl will in the future ;( )*
 
 ## 1. Incident Overview
 
@@ -20,12 +20,12 @@ This incident was triggered when Microsoft Defender detected activity related to
 ### 01 - Defender Portal Navigation
 I got an email alert from Microsoft Defender, so I navigated to the security.microsoft.com admin portal > Investigation & response > Incidents, to investigate the alert.
 
-![01 - Defender home and incidents navigation](01.png)
+![01 - Defender home and incidents navigation](Images/01.png)
 
 ### 02 - Incident Listed
 I quickly found the incident entry: " 'Wacatac' malware was prevented, with informational severity and remediated state".
 
-![02 - Incident list entry](02.png)
+![02 - Incident list entry](Images/02.png)
 
 This means Microsoft's AIR **Automated Investigation and Remediation** has detected and remediated a potential threat automatically.
 As a SOC analyst, I shouldn't always trust AI, no matter how advanced it may be.
@@ -38,7 +38,7 @@ Confirms:
 - Device/entity relation between stock-20 and libebm_win_x64.dll
 
 
-![03 - Incident details and attack story](03.png)
+![03 - Incident details and attack story](Images/03.png)
 
 => Not a very complex incident, but requires looking into never the less.
 
@@ -46,7 +46,7 @@ Confirms:
 Now let's follow the whole story of the incident, and how, when and what the AIR has found:
 
 
-![04 - Process/activity timeline](04.png)
+![04 - Process/activity timeline](Images/04.png)
 
 From the incident story, we can trace the process tree over time.
 The timeline shows multiple python.exe executions and interactions with several files. Reviewing the command lines indicates these were automated script/tool-driven actions rather than manual user activity, which is normal in Python workflows. Combined with the file paths, file context, and the user's role and department, this context was crucial in determining whether the activity represented a real threat.
@@ -56,7 +56,7 @@ In fact, I know the user *Fares* is working on an AI project, so this is better 
 
 A simple search confirmed that libebm_win_x64.dll can be a legitimate component of InterpretML (Microsoft open-source ML library), supporting possible false-positive assessment.
 
-![05 - File legitimacy context](05.png)
+![05 - File legitimacy context](Images/05.png)
 
 ### 06 - User Verification
 But this still doesn't eliminate the threat.
@@ -64,17 +64,17 @@ There is always a possibility of them or an external party downloading a library
 
 So I had to make sure with the user himself to verify whether a Python library installation occurred around March 18 and whether blocking happened, which they then confirmed.
 
-![06 - User communication in Teams](06.png)
+![06 - User communication in Teams](Images/06.png)
 
 ### 07 - Threat Intelligence Cross-check
 VirusTotal-style result shows 1/72 engines flagged the file, while the majority reported undetected, further supporting low-confidence malicious classification.
 
-![07 - Multi-engine scan result](07.png)
+![07 - Multi-engine scan result](Images/07.png)
 
 ### 08 - Automated Investigation Log
 Shows investigation completion and analysis actions performed by the AIR across files and hashes.
 
-![08 - Automated investigation log](08.png)
+![08 - Automated investigation log](Images/08.png)
 
 ### 09 - Containment Action Evidence
 Shows file quarantine action for libebm_win_x64.dll:
@@ -83,7 +83,7 @@ Shows file quarantine action for libebm_win_x64.dll:
 - Status: Completed
 - Submission time: Mar 18, 2026 2:08 PM
 
-![09 - Quarantine action details](09.png)
+![09 - Quarantine action details](Images/09.png)
 
 ## 3. Investigation and Response Actions Taken
 
