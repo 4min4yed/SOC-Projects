@@ -1,6 +1,6 @@
 # Incident Report: 'Wacatac' malware was prevented
 
-*Proof AI won't take over SOC analyst jobs, anytime soon (but it will definetyl will in the future ;( )*
+*Proof AI won't take over SOC analyst jobs, anytime soon (but it definety will in the future ;( )*
 
 ## 1. Incident Overview
 
